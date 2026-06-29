@@ -1,0 +1,70 @@
+/* src/components/layout/Navbar.module.css */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--navbar-h);
+  background: linear-gradient(90deg, rgba(30, 58, 138, 0.90), rgba(37, 99, 235, 0.84));
+  backdrop-filter: blur(22px);
+  border-bottom: 1px solid rgba(191, 219, 254, 0.28);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  gap: 22px;
+  z-index: 90;
+  box-shadow: 0 10px 34px rgba(30, 64, 175, 0.18);
+}
+
+.brand {
+  display:flex; align-items:center; gap:10px;
+  background: transparent; border:0; color:#ffffff; flex-shrink:0;
+}
+.logoMark {
+  width:36px; height:36px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  color:#DBEAFE; background: rgba(255,255,255,0.16);
+  border:1px solid rgba(255,255,255,0.24);
+}
+.brandText { font-size: 22px; font-weight: 800; letter-spacing: -0.04em; }
+.brandText span { color: #BFDBFE; }
+
+.topNav {
+  display:flex; align-items:center; gap:6px;
+  min-width: 0; flex: 1;
+}
+.navItem {
+  display:flex; align-items:center; gap:8px;
+  height:40px; padding:0 14px; border-radius:14px;
+  color: rgba(255,255,255,0.82); font-size:13px; font-weight:700;
+  transition: all var(--t-fast); white-space: nowrap;
+}
+.navItem:hover { background: rgba(255,255,255,0.12); color: #fff; transform: translateY(-1px); }
+.navItem.active { background: #ffffff; color: #1D4ED8; box-shadow: 0 10px 26px rgba(15,23,42,0.14); }
+.navIcon { display:flex; }
+
+.right { margin-left: auto; display: flex; align-items: center; gap: 12px; flex-shrink:0; }
+.statusPill { display:flex; align-items:center; gap:6px; background: rgba(16,185,129,.16); border:1px solid rgba(167,243,208,.35); border-radius:99px; padding: 5px 12px; font-size:12px; color:#DCFCE7; font-weight:700; }
+.statusDot { width:7px; height:7px; background:#34D399; border-radius:50%; animation:pulse 2s infinite; }
+.iconBtn { position:relative; width:38px; height:38px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.94); border:1px solid rgba(255,255,255,0.35); border-radius:14px; color:#334155; transition:all var(--t-fast); }
+.iconBtn:hover { transform: translateY(-1px); background:#fff; }
+.notifBadge { position:absolute; top:-5px; right:-5px; background:var(--red); color:white; font-size:10px; font-weight:800; width:17px; height:17px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.userArea { position:relative; }
+.userBtn { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.94); border:1px solid rgba(255,255,255,0.36); border-radius:15px; padding:6px 10px; color:var(--text-primary); transition:all var(--t-fast); }
+.userBtn:hover { background:#fff; transform: translateY(-1px); }
+.avatar,.avatarLg { border-radius:50%; background: linear-gradient(135deg, #2563EB, #60A5FA); display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff; }
+.avatar { width:30px; height:30px; font-size:11px; }
+.avatarLg { width:42px; height:42px; font-size:14px; flex-shrink:0; }
+.userInfo { display:flex; flex-direction:column; align-items:flex-start; }
+.userName { font-size:13px; font-weight:700; line-height:1.2; }
+.userRole { font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.5px; }
+.dropdown { position:absolute; top:calc(100% + 10px); right:0; min-width:230px; background:var(--bg-elevated); border:1px solid var(--border-strong); border-radius:18px; box-shadow:var(--shadow-lg); overflow:hidden; z-index:200; }
+.dropdownHeader { display:flex; align-items:center; gap:12px; padding:16px; background:var(--bg-card); }
+.dropName { font-size:14px; font-weight:700; }
+.dropEmail { font-size:12px; color:var(--text-muted); margin-top:1px; }
+.dropCompany { font-size:11px; color:var(--cyan); margin-top:2px; }
+.dropDivider { height:1px; background:var(--border); }
+.dropItem { width:100%; display:flex; align-items:center; gap:10px; padding:12px 16px; font-size:13px; color:var(--text-secondary); background:none; border:none; text-align:left; transition:all var(--t-fast); }
+.dropItem:hover { background:var(--bg-hover); color:var(--text-primary); }
+.overlay { position:fixed; inset:0; z-index:150; }
+
+@media (max-width: 1180px) { .navItem { padding:0 10px; font-size:12px; } .statusPill { display:none; } }
+@media (max-width: 900px) { .navbar { overflow-x:auto; padding:0 16px; } .userInfo { display:none; } }

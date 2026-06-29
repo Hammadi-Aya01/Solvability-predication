@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+:root {
+ --bg-base:#F8FAFC;
+ --bg-surface:#FFFFFF;
+ --bg-elevated:#FFFFFF;
+ --bg-card:#FFFFFF;
+ --bg-hover:#F1F5F9;
+ --border:#E2E8F0;
+ --border-strong:#CBD5E1;
+ --cyan:#2563EB;
+ --cyan-dim:rgba(37,99,235,.10);
+ --cyan-glow:rgba(37,99,235,.20);
+ --green:#10B981;
+ --green-dim:rgba(16,185,129,.12);
+ --red:#EF4444;
+ --red-dim:rgba(239,68,68,.12);
+ --orange:#F59E0B;
+ --orange-dim:rgba(245,158,11,.12);
+ --purple:#6366F1;
+ --purple-dim:rgba(99,102,241,.12);
+ --text-primary:#0F172A;
+ --text-secondary:#475569;
+ --text-muted:#94A3B8;
+ --text-accent:#2563EB;
+ --r-sm:10px;--r-md:14px;--r-lg:20px;--r-xl:30px;
+ --shadow-sm:0 4px 12px rgba(15,23,42,.08);
+ --shadow-md:0 10px 30px rgba(15,23,42,.10);
+ --shadow-lg:0 20px 50px rgba(15,23,42,.12);
+ --shadow-cyan:0 0 24px rgba(37,99,235,.12);
+ --shadow-glow:0 0 60px rgba(37,99,235,.08);
+ --font-display:'Manrope','IBM Plex Sans Arabic',sans-serif;
+ --font-body:'Manrope','IBM Plex Sans Arabic',sans-serif;
+ --sidebar-w:252px;--navbar-h:68px;
+ --t-fast:.15s ease;--t-normal:.25s ease;--t-slow:.45s cubic-bezier(0.16,1,0.3,1);
+}

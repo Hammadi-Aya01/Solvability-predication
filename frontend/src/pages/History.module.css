@@ -1,0 +1,30 @@
+/* src/pages/History.module.css */
+.page {}
+.loading { display:flex;align-items:center;gap:12px;padding:40px;justify-content:center;color:var(--text-secondary);font-size:14px; }
+.empty { display:flex;align-items:center;justify-content:center;padding:40px;color:var(--text-muted);font-size:14px; }
+
+.chartCard { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 22px;margin-bottom:20px; }
+.chartTitle { font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:16px; }
+
+.filterRow { display:flex;gap:4px;margin-bottom:16px; }
+.filterTab {
+  display:flex;align-items:center;gap:6px;
+  padding:8px 16px;background:var(--bg-elevated);
+  border:1px solid var(--border);border-radius:var(--r-sm);
+  font-size:13px;color:var(--text-secondary);cursor:pointer;transition:all var(--t-fast);
+}
+.filterTab:hover { color:var(--text-primary); }
+.active { background:var(--cyan-dim);color:var(--cyan);border-color:rgba(0,212,255,0.3); }
+.filterCount { background:var(--bg-hover);border-radius:99px;padding:1px 7px;font-size:11px; }
+
+.tableCard { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden; }
+.table { width:100%;min-width:900px; }
+.table th { padding:11px 14px;font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.6px;background:var(--bg-elevated);border-bottom:1px solid var(--border);text-align:left; }
+.tr td { padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:middle; }
+.tr:last-child td { border-bottom:none; }
+.tr:hover td { background:var(--bg-hover); }
+.viewBtn { background:var(--bg-elevated);border:1px solid var(--border);border-radius:var(--r-sm);color:var(--text-secondary);padding:4px 10px;cursor:pointer;transition:all var(--t-fast); }
+.viewBtn:hover { background:var(--cyan-dim);color:var(--cyan);border-color:var(--cyan); }
+
+.roleBadge,.actionBadge { display:inline-flex;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700;background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-secondary);white-space:nowrap; }
+.actionBadge { color:var(--cyan);background:var(--cyan-dim);border-color:rgba(0,212,255,.25); }

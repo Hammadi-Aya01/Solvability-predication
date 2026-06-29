@@ -1,0 +1,17 @@
+/* src/layouts/AppLayout.module.css */
+.root { min-height: 100vh; }
+
+.main {
+  min-height: 100vh;
+  padding-top: var(--navbar-h);
+}
+
+.pageWrapper {
+  padding: 34px 42px;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .pageWrapper { padding: 20px 16px; }
+}

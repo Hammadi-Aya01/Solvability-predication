@@ -1,0 +1,50 @@
+/* src/styles/animations.css */
+
+@keyframes fadeIn    { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeUp    { from { opacity: 0; transform: translateY(16px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes fadeDown  { from { opacity: 0; transform: translateY(-16px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes scaleIn   { from { opacity: 0; transform: scale(0.95) } to { opacity: 1; transform: scale(1) } }
+@keyframes pulse     { 0%,100% { opacity: 1 } 50% { opacity: 0.4 } }
+@keyframes spin      { to { transform: rotate(360deg) } }
+@keyframes shimmer   {
+  0%   { background-position: -200% 0 }
+  100% { background-position:  200% 0 }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px) }
+  to   { opacity: 1; transform: translateX(0) }
+}
+@keyframes glow {
+  0%,100% { box-shadow: 0 0 20px var(--cyan-glow) }
+  50%      { box-shadow: 0 0 40px var(--cyan-glow), 0 0 80px rgba(0,212,255,0.1) }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(8px) }
+  to   { opacity: 1; transform: translateY(0) }
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg,
+    var(--bg-elevated) 25%,
+    var(--bg-hover) 50%,
+    var(--bg-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--r-sm);
+}
+
+/* Stagger helpers */
+.stagger > *:nth-child(1) { animation-delay: 0ms }
+.stagger > *:nth-child(2) { animation-delay: 60ms }
+.stagger > *:nth-child(3) { animation-delay: 120ms }
+.stagger > *:nth-child(4) { animation-delay: 180ms }
+.stagger > *:nth-child(5) { animation-delay: 240ms }
+.stagger > *:nth-child(6) { animation-delay: 300ms }
+.stagger > *:nth-child(7) { animation-delay: 360ms }
+.stagger > *:nth-child(8) { animation-delay: 420ms }
+
+.anim-fade-up {
+  animation: fadeUp 0.5s var(--t-slow) both;
+}

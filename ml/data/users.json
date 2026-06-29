@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "scrypt:32768:8:1$h6fBFaS2hFLBdlsi$2a0ad258e7429632ce94337912fca0ab0f796bcbe93fe974535521aa38ecf66e4a2eb55cb866090ed97461f965242d61d52a0c71365ff804ecfc1d073c7b106d",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "agent1",
+    "password": "scrypt:32768:8:1$pwvhcdy3AZzTHUT2$a9ea86bc00ea923e12e63960fedaca3d66fff4bc9c392a99352d6cf80bb3efa174436590f66da415523379b058935aa2f87830e798139975eead419b4e3b654f",
+    "role": "agent"
+  }
+]

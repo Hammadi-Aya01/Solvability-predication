@@ -1,0 +1,21 @@
+/* src/pages/Dashboard.module.css */
+.page {
+  width: 100%;
+}
+.loadingState { display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:14px;color:var(--text-secondary);font-size:14px; }
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(420px, 1fr));
+  gap: 28px 32px;
+  width: min(1280px, calc(100vw - 80px));
+  max-width: 1280px;
+  margin: 34px auto 0;
+  justify-content: center;
+}
+.statsGrid > * { min-height: 170px; }
+@media (max-width: 1050px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    width: min(680px, calc(100vw - 40px));
+  }
+}

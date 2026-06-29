@@ -1,0 +1,227 @@
+/* src/pages/Settings.module.css */
+.page {}
+.layout { display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:flex-start; }
+
+.sideNav {
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:10px;
+  display:flex;flex-direction:column;gap:2px;
+  position:sticky;top:calc(var(--navbar-h) + 28px);
+}
+.sideBtn {
+  padding:10px 14px;border-radius:var(--r-sm);
+  background:none;border:none;
+  font-size:13px;font-weight:500;color:var(--text-secondary);
+  text-align:left;cursor:pointer;transition:all var(--t-fast);
+}
+.sideBtn:hover { background:var(--bg-elevated);color:var(--text-primary); }
+.sideBtnActive { background:var(--cyan-dim);color:var(--cyan); }
+
+.card {
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:28px;
+}
+.cardTitle {
+  font-family:var(--font-display);font-size:18px;font-weight:700;
+  color:var(--text-primary);margin-bottom:24px;
+}
+.helpText {
+  color:var(--text-muted);font-size:13px;margin-top:-12px;margin-bottom:22px;
+}
+
+.avatarSection {
+  display:flex;align-items:center;gap:16px;
+  padding:16px;background:var(--bg-elevated);
+  border-radius:var(--r-md);margin-bottom:24px;
+}
+.avatarBig {
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),#0066ff);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:800;color:var(--bg-base);flex-shrink:0;
+}
+.avatarName { font-size:15px;font-weight:600;color:var(--text-primary); }
+.avatarEmail { font-size:13px;color:var(--text-muted);margin-top:2px; }
+.avatarRole {
+  display:inline-flex;margin-top:4px;
+  padding:2px 8px;background:var(--cyan-dim);color:var(--cyan);
+  border-radius:99px;font-size:11px;font-weight:600;
+}
+
+.form { display:flex;flex-direction:column;gap:18px; }
+.formRow { display:grid;grid-template-columns:1fr 1fr;gap:14px; }
+.field { display:flex;flex-direction:column;gap:6px; }
+.label { font-size:12px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.6px; }
+
+.pwStrength { display:flex;gap:16px;flex-wrap:wrap; }
+
+.divider { height:1px;background:var(--border);margin:24px 0; }
+
+.dangerZone {}
+.dangerTitle { font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:14px; }
+.sessionItem {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px;background:var(--bg-elevated);border-radius:var(--r-sm);
+}
+
+.companyInfo { display:flex;flex-direction:column;gap:0;margin-bottom:20px; }
+.infoRow {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 0;border-bottom:1px solid var(--border);
+}
+.infoRow:last-child { border-bottom:none; }
+.infoKey { font-size:13px;color:var(--text-muted); }
+.infoVal { font-size:13px;color:var(--text-primary);font-weight:500; }
+
+.planCard {
+  display:flex;align-items:center;gap:14px;
+  padding:16px;
+  background:var(--cyan-dim);border:1px solid rgba(0,212,255,0.2);
+  border-radius:var(--r-md);
+}
+.planBadge {
+  padding:6px 14px;
+  background:var(--cyan);color:var(--bg-base);
+  border-radius:99px;font-size:12px;font-weight:800;
+  letter-spacing:0.5px;white-space:nowrap;
+}
+
+@media (max-width:768px) {
+  .layout { grid-template-columns:1fr; }
+  .sideNav { flex-direction:row;position:static; }
+  .formRow { grid-template-columns:1fr; }
+}
+
+/* User management styles */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table th {
+  padding: 14px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.5px;
+  background: var(--bg-card);
+}
+.table td {
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.avatarSmall {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), #0066ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--bg-base);
+  flex-shrink: 0;
+}
+.roleBadge, .statusBadge {
+  display: inline-flex;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.roleAdmin {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+}
+.roleUser {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+.statusActive {
+  background: var(--green-dim);
+  color: var(--green);
+}
+.statusInactive {
+  background: var(--red-dim);
+  color: var(--red);
+}
+.actionBtn {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-secondary);
+  transition: all var(--t-fast);
+}
+.actionBtn:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+.modalCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.modalTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
